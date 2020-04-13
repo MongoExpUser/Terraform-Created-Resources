@@ -38,14 +38,18 @@ output "ec2_instances" {
 ```
 
 
-2) Execute the module from the base file (base.tf) in the current working directory (CWD) by typing the following commands at the prompt:
+2) Execute the module from the base file (base.tf) in the current working directory (CWD) by typing the following commands at the prompt (assuming running via <strong>```bash```</strong>  with <strong>```sudo```</strong> access):
 
 
 ```bash
-  TF_VAR_aws_access_key="access-key-value" \
-   TF_VAR_aws_secret_key="secret-key-value" \
-   TF_VAR_aws_region="aws-region-value" \
-   terraform plan
+  sudo terraform init
+  
+  and
+
+  sudo TF_VAR_aws_access_key="access-key-value" \
+       TF_VAR_aws_secret_key="secret-key-value" \
+       TF_VAR_aws_region="aws-region-value" \
+       terraform plan
                                                                                     
  and
                                                                                     
