@@ -57,3 +57,9 @@ output "ec2_instances" {
       TF_VAR_aws_region="aws-region-value" \
       terraform apply
 ```
+
+# License
+
+Copyright © 2015 - present. MongoExpUser
+
+Licensed under the MIT license.
