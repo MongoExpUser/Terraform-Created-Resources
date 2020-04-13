@@ -15,7 +15,7 @@
 # aws ec2 instance(s)
 data "aws_ami" "ubuntu" {
   most_recent     = true
-  owners          = "${var.owners}"
+  owners          = ["099720109477"] # Canonical
 
   filter {
     name          = "name"
