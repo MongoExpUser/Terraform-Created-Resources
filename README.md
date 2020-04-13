@@ -7,7 +7,6 @@ This repo is based on <strong>```Terraform Version 0.12.23```</strong>.
 
 #
 <strong>Running Module</strong>
-#
 
 To run the module:
 
