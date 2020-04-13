@@ -12,6 +12,7 @@
 #  main.tf                                                                                         #
 #..................................................................................................#
 
+
 # aws ec2 instance(s)
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -25,7 +26,8 @@ data "aws_ami" "ubuntu" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
-
+  
+  owners = "${var.owners}"
 }
 
 resource "aws_instance" "aws_ec2_web_server" {
