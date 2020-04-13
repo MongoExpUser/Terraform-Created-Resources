@@ -1,5 +1,5 @@
 
-# Terraform module for creation of resources on public clouds platforms.
+<strong>Terraform module for creation of resources on public clouds platforms.</strong>
 
                                                                                  
 Call/execute module from base file (base.tf) in the current working directory (CWD) as follows:                                  
