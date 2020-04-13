@@ -1,32 +1,16 @@
-#.....................................................................................#
-#                                                                                     #
-#  @License Starts                                                                    #
-#                                                                                     #
-#  Copyright © 2015 - present. MongoExpUser                                           #
-#                                                                                     #
-#  License: MIT - See: https://github.com/MongoExpUser//blob/master/README.md         #
-#                                                                                     #
-#  @License Ends                                                                      #
-#                                                                                     #
-#.....................................................................................#
-#  base.tf - base file: all modules are called from this base file                    #
-#                                                                                     #                                                                                             #
-#  Terraform modules for creation of resources on on public clouds platforms.         #
-#                                                                                     #
-#  Call/execute module base file (base.tf) as:                                        #
-#                                                                                     #
-#  TF_VAR_aws_access_key="access-key-value" \                                         #
-#   TF_VAR_aws_secret_key="secret-key-value" \                                        #
-#   TF_VAR_aws_region="aws-region-value" \                                            #
-#   terraform plan                                                                    #
-#                                                                                     #
-# and                                                                                 #
-#                                                                                     #
-#  TF_VAR_aws_access_key="access-key-value" \                                         #
-#   TF_VAR_aws_secret_key="secret-key-value" \                                        #
-#   TF_VAR_aws_region="aws-region-value" \                                            #
-#   terraform apply                                                                   #
-#.....................................................................................#
+#..................................................................................................#
+#                                                                                                  #
+#  @License Starts                                                                                 #
+#                                                                                                  #
+#  Copyright © 2015 - present. MongoExpUser                                                        #
+#                                                                                                  #
+#  License: MIT - https://github.com/MongoExpUser/Terraform-Created-Resources/blob/master/LICENSE  #
+#                                                                                                  #
+#  @License Ends                                                                                   #
+#                                                                                                  #  
+#..................................................................................................#
+#  base.tf                                                                                         #
+#..................................................................................................#
 
 # define provider(s) credential variables
 variable "aws_access_key" {}
