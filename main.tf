@@ -12,22 +12,24 @@
 #  main.tf                                                                                         #
 #..................................................................................................#
 
+
 # aws ec2 instance(s)
 data "aws_ami" "ubuntu" {
-  most_recent     = true
- 
+  most_recent = true
+
   filter {
-    name          = "name"
-    values        = "${var.filter_name_values}"
+    name   = "name"
+    values = "${var.filter_name_values}"
   }
   
   filter {
-    name          = "virtualization-type"
-    values        = "${var.filter_virtualization_type_values}"
+    name   = "virtualization-type"
+    values = "${var.filter_virtualization_type_values}"
   }
   
-  owners          = "${var.owners}"
+  owners = "${var.owners}"
 }
+
 
 resource "aws_instance" "aws_ec2_web_server" {
   count           = "${var.number_of_instance}"
@@ -35,7 +37,7 @@ resource "aws_instance" "aws_ec2_web_server" {
   instance_type   = "${var.ec2_instance_type}"
 
   tags = {
-    Name          = "${var.region}-ubuntu-bionic}"
+    Name = "${var.region}-ubuntu-bionic}"
   }
 }
 
