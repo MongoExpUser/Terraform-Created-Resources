@@ -1,2 +1,20 @@
 # terraform-created-resources
-Terraform modules for creation of resources on on public clouds platforms.
+
+Terraform module for creation of resources on public clouds platforms.
+
+                                                                                 
+Call/execute module from base file (base.tf) in the current working directory (CWD) as follows:                                  
+```bash
+                                                                                   
+  TF_VAR_aws_access_key="access-key-value" \                                         
+   TF_VAR_aws_secret_key="secret-key-value" \                                        
+   TF_VAR_aws_region="aws-region-value" \                                            
+   terraform plan                                                                    
+                                                                                    
+ and                                                                                 
+                                                                                    
+  TF_VAR_aws_access_key="access-key-value" \                                         
+   TF_VAR_aws_secret_key="secret-key-value" \                                        
+   TF_VAR_aws_region="aws-region-value" \                                            
+   terraform apply                                                                   
+```
