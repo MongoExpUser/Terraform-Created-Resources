@@ -1,6 +1,10 @@
+#
 # Terraform-Created-Resources
+#
 
 <strong>Terraform module for creation of resources on public clouds platforms.</strong>
+
+This repo is based on the <strong>```Terraform Version 0.12.23```</strong>.
 
                                                                                  
 Call/execute module from base file (base.tf) in the current working directory (CWD) as follows:                                  
