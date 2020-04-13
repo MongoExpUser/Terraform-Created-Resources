@@ -15,8 +15,7 @@
 # aws ec2 instance(s)
 data "aws_ami" "ubuntu" {
   most_recent     = true
-  owners          = ["099720109477"] # Canonical
-
+ 
   filter {
     name          = "name"
     values        = "${var.filter_name_values}"
@@ -26,6 +25,8 @@ data "aws_ami" "ubuntu" {
     name          = "virtualization-type"
     values        = "${var.filter_virtualization_type_values}"
   }
+  
+  owners          = "${var.owners}"
 }
 
 resource "aws_instance" "aws_ec2_web_server" {
