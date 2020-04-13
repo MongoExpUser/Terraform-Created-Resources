@@ -5,9 +5,6 @@ Terraform module for creation of resources on public clouds platforms.
                                                                                  
 Call/execute module from base file (base.tf) in the current working directory (CWD) as follows:                                  
 ```bash
-
-  $ export TF_VAR_mongodb_atlas_public_key="public-key-value"
-  $ export TF_VAR_mongodb_atlas_private_key="private-key-value"
   $ export TF_VAR_aws_access_key="access-key-value"
   $ export TF_VAR_aws_secret_key="secret-key-value"
   $ export TF_VAR_aws_region="aws-region-value"
