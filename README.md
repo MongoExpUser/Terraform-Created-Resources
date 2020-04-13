@@ -1,6 +1,5 @@
 #
 # Terraform-Created-Resources
-#
 
 <strong>Terraform module for creation of resources on public cloud platforms.</strong>
 
