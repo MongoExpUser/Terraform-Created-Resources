@@ -13,7 +13,7 @@
 #..................................................................................................#
 
 variable "number_of_instance" {
-  default = 1
+  default = 2
 }
 
 variable "provider_name" {
