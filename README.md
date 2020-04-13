@@ -1,6 +1,5 @@
-# terraform-created-resources
 
-Terraform module for creation of resources on public clouds platforms.
+# Terraform module for creation of resources on public clouds platforms.
 
                                                                                  
 Call/execute module from base file (base.tf) in the current working directory (CWD) as follows:                                  
