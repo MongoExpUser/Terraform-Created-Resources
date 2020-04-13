@@ -42,17 +42,16 @@ output "ec2_instances" {
 
 
 ```bash
+  1) init
   sudo terraform init
   
-  and
-
+  2) terraform plan
   sudo TF_VAR_aws_access_key="access-key-value" \
        TF_VAR_aws_secret_key="secret-key-value" \
        TF_VAR_aws_region="aws-region-value" \
        terraform plan
                                                                                     
- and
-                                                                                    
+ 3) terraform apply                                                                               
  sudo TF_VAR_aws_access_key="access-key-value" \
       TF_VAR_aws_secret_key="secret-key-value" \
       TF_VAR_aws_region="aws-region-value" \
