@@ -56,8 +56,8 @@ output "lightsail_instances" {
        TF_VAR_aws_region="aws-region-value" \
        terraform plan
                                                                                     
- #3) terraform apply
- sudo TF_VAR_aws_access_key="access-key-value" \
+  #3) terraform apply
+  sudo TF_VAR_aws_access_key="access-key-value" \
       TF_VAR_aws_secret_key="secret-key-value" \
       TF_VAR_aws_region="aws-region-value" \
       terraform apply
