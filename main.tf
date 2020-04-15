@@ -12,7 +12,7 @@
 #  main.tf                                                                                         #
 #..................................................................................................#
 
-# # create aws ec2 instance(s)
+# create aws ec2 instance(s)
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -29,14 +29,25 @@ data "aws_ami" "ubuntu" {
   owners   = "${var.owners}"
 }
 
-
 resource "aws_instance" "aws_ec2_web_server" {
-  count           = "${var.number_of_instance}"
+  count           = "${var.ec2_instance_number}"
   ami             = "${data.aws_ami.ubuntu.id}"
   instance_type   = "${var.ec2_instance_type}"
 
   tags = {
     Name = "${var.region}-ubuntu-bionic}"
+  }
+}
+
+# create a new lightsail instance()
+resource "aws_lightsail_instance" "aws_lightsail_db_server" {
+  count             = "${length(var.lightsail_instance_names)}"
+  name              = "${var.lightsail_instance_names[count.index]}"
+  availability_zone = "${var.light_sail_availability_zone}"
+  blueprint_id      = "${var.lightsail_blueprint_id}"
+  bundle_id         = "${var.lightsail_bundle_id}"
+  tags = {
+    lightsail_key   = "${var.lightsail_tags_values[count.index]}"
   }
 }
 
