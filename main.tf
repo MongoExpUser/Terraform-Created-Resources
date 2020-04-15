@@ -43,7 +43,7 @@ resource "aws_instance" "aws_ec2_web_server" {
 resource "aws_lightsail_instance" "aws_lightsail_db_server" {
   count             = "${length(var.lightsail_instance_names)}"
   name              = "${var.lightsail_instance_names[count.index]}"
-  availability_zone = "${var.light_sail_availability_zone}"
+  availability_zone = "${var.lightsail_availability_zone}"
   blueprint_id      = "${var.lightsail_blueprint_id}"
   bundle_id         = "${var.lightsail_bundle_id}"
   tags = {
