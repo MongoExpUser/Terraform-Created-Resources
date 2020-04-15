@@ -39,7 +39,7 @@ output "lightsail_instances" {
   value = "${module.public_cloud_resources.aws_lightsail_instances}"
 }
 
-# add more outputs as necessary or desired
+# add more outputs as necessary or desired.
 ```
 
 
