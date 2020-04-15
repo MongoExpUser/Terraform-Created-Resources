@@ -30,8 +30,13 @@ module "public_cloud_resources" {
 }
 
 output "ec2_instances" {
-  description = "A list of all created AWS' EC2 instances"
+  description = "A list of all created AWS EC2 instances"
   value = "${module.public_cloud_resources.aws_ec2_instances}"
+}
+
+output "lightsail_instances" {
+  description = "A list of all created AWS lightsail instances"
+  value = "${module.public_cloud_resources.aws_lightsail_instances}"
 }
 
 # add more outputs as necessary or desired
@@ -51,7 +56,7 @@ output "ec2_instances" {
        TF_VAR_aws_region="aws-region-value" \
        terraform plan
                                                                                     
- #3) terraform apply                                                                               
+ #3) terraform apply
  sudo TF_VAR_aws_access_key="access-key-value" \
       TF_VAR_aws_secret_key="secret-key-value" \
       TF_VAR_aws_region="aws-region-value" \
