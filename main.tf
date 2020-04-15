@@ -39,7 +39,7 @@ resource "aws_instance" "aws_ec2_web_server" {
   }
 }
 
-# create a new lightsail instance()
+# create lightsail instance(s)
 resource "aws_lightsail_instance" "aws_lightsail_db_server" {
   count             = "${length(var.lightsail_instance_names)}"
   name              = "${var.lightsail_instance_names[count.index]}"
