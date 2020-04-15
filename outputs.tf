@@ -12,7 +12,6 @@
 #  outputs.tf                                                                                      #
 #..................................................................................................#
 
-
 #define output(s)
 output "aws_ec2_instances" {
   description = "A list of all created AWS' EC2 instances"
@@ -23,5 +22,3 @@ output "aws_lightsail_instances" {
   description = "A list of all created AWS' lightsail instances"
   value = "${aws_lightsail_instance.aws_lightsail_db_server}"
 }
-
-# add more outputs as necessary or desired.
