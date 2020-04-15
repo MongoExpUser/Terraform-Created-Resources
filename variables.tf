@@ -50,7 +50,7 @@ variable "lightsail_instance_names" {
   default = ["lightsail_mysql_server", "lightsail_mongodb_server"]
 }
 
-variable "light_sail_availability_zone" {
+variable "lightsail_availability_zone" {
   default = "us-east-1a"
 }
 
