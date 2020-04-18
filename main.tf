@@ -17,6 +17,7 @@ resource "aws_instance" "aws_ec2_web_server" {
   count                 = length(var.ec2_web_server_ami_numbers)
   ami                   = var.ec2_web_server_ami_numbers[count.index]
   instance_type         = var.ec2_web_server_types[count.index]
+  
   #note: cpu_core_count and cpu_threads_per_core are not supported on "t3a.nano"
   #cpu_core_count       = var.ec2_web_server_cpu_core_count
   #cpu_threads_per_core = var.ec2_web_server_cpu_threads_per_core
@@ -30,6 +31,7 @@ resource "aws_instance" "aws_ec2_db_server" {
   count                 = length(var.ec2_db_server_ami_numbers)
   ami                   = var.ec2_db_server_ami_numbers[count.index]
   instance_type         = var.ec2_db_server_types[count.index]
+  
   #note: cpu_core_count and cpu_threads_per_core are not supported on "t3a.nano"
   #cpu_core_count       = var.ec2_db_server_cpu_core_count
   #cpu_threads_per_core = var.ec2_db_server_cpu_threads_per_core
