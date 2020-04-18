@@ -32,19 +32,19 @@ module "public_cloud_resources" {
 output "ec2_web_server_instances" {
   description = "A list of all created EC2 web server instances"
   # the list contains key-value pairs of each instance's attributes
-  value = module.public_cloud_resources.aws_ec2_web_server
+  value = module.public_cloud_resources.aws_ec2_web_servers
 }
 
 output "ec2_db_server_instances" {
   description = "A list of all created EC2 db server instances"
   # the list contains key-value pairs of each instance's attributes
-  value = module.public_cloud_resources.aws_ec2_db_server
+  value = module.public_cloud_resources.aws_ec2_db_servers
 }
 
 output "lightsail_instances" {
   description = "A list of all created AWS lightsail db server instances"
   # the list contains key-value pairs of each instance's attributes
-  value = module.public_cloud_resources.aws_lightsail_db_server
+  value = module.public_cloud_resources.aws_lightsail_db_servers
 }
 
 # add more outputs as necessary or desired.
