@@ -12,6 +12,7 @@
 #  outputs.tf                                                                                      #
 #..................................................................................................#
 
+
 #define output(s)
 output "aws_ec2_web_servers" {
   description = "A list of all created EC2 web server instances"
