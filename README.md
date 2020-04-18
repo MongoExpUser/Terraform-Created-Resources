@@ -20,23 +20,30 @@ variable "aws_secret_key" {}
 variable "aws_region" {}
 
 provider "aws" {
-  access_key = "${var.aws_access_key}"
-  secret_key = "${var.aws_secret_key}"
-  region     = "${var.aws_region}"
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+  region     = var.aws_region
 }
 
 module "public_cloud_resources" {
   source = "git::https://github.com/MongoExpUser/Terraform-Created-Resources.git"
 }
 
-output "ec2_instances" {
-  description = "A list of all created AWS EC2 instances"
-  value = "${module.public_cloud_resources.aws_ec2_instances}"
+output "ec2_web_server_instances" {
+  description = "A list of all created EC2 web server instances"
+  # the list contains key-value pairs of each instance's attributes
+  value = module.public_cloud_resources.aws_ec2_web_server
 }
 
+output "ec2_db_server_instances" {
+  description = "A list of all created EC2 db server instances"
+  # the list contains key-value pairs of each instance's attributes
+  value = module.public_cloud_resources.aws_ec2_db_server
+
 output "lightsail_instances" {
-  description = "A list of all created AWS lightsail instances"
-  value = "${module.public_cloud_resources.aws_lightsail_instances}"
+  description = "A list of all created AWS lightsail db server instances"
+  # the list contains key-value pairs of each instance's attributes
+  value = module.public_cloud_resources.aws_lightsail_db_server
 }
 
 # add more outputs as necessary or desired.
@@ -68,3 +75,5 @@ output "lightsail_instances" {
 Copyright © 2015 - present. MongoExpUser
 
 Licensed under the MIT license.
+
+
