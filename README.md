@@ -39,6 +39,7 @@ output "ec2_db_server_instances" {
   description = "A list of all created EC2 db server instances"
   # the list contains key-value pairs of each instance's attributes
   value = module.public_cloud_resources.aws_ec2_db_server
+}
 
 output "lightsail_instances" {
   description = "A list of all created AWS lightsail db server instances"
