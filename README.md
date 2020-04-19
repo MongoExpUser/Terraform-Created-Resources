@@ -1,9 +1,9 @@
 #
 # Terraform-Created-Resources
 
-<h3><strong>Terraform module for creation of resources on public cloud platforms.</strong></h3>
+<strong>Terraform module for creation of resources on public cloud platforms.</strong>
 
-<h3>This repo is based on <strong>```Terraform Version 0.12.24```</strong></h3>.
+This repo is based on <strong>```Terraform Version 0.12.24```</strong>.
 
 #
 <strong>Running Module</strong>
