@@ -155,7 +155,7 @@ variable "lightsail_db_server_tags_values" {
 }
 
 variable "lightsail_db_server_static_ip" {
-  default = ["static-ip-mysql-server", "static-ip_mongodb-server"]
+  default = ["static-ip-mysql-server", "static-ip-mongodb-server"]
 }
 
 # add more variables as necessary or desired.
