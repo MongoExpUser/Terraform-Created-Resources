@@ -32,7 +32,6 @@ output "aws_lightsail_servers" {
   value = aws_lightsail_instance.aws_lightsail_server
 }
 
-
 output "aws_lightsail_static_ips" {
   description = "A list of all created AWS lightsail static ips"
   # the list contains key-value pairs of each instance's attributes
