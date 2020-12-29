@@ -13,9 +13,7 @@
 #..................................................................................................#
 
 
-#A: define non-provider variable(s) for ec2 instances
-
-# A1. web servers
+# define provider variable(s)
 variable "provider_name" {
  default = "AWS"
 }
@@ -24,11 +22,15 @@ variable "region" {
  default = "us-east-1"
 }
 
+
+# A: define non-provider variable(s) for ec2
+
+# A1. web servers
 variable "ec2_web_server_ami_numbers" {
-  # note: Ubuntu Server 18.04 LTS (HVM), SSD Volume Type => ami-07ebfd5b3428b6f4d (64-bit x86)
+  # note: Ubuntu Server 20.04 LTS (HVM), SSD Volume Type => ami-0885b1f6bd170450c (64-bit x86)
   # note: Amazon Linux 2 LTS with .NET Core 3.1, Mono 5.18 and PowerShell 6.2 pre-installed => ami-01fbc92d24852df9b
   # note: both have-> (1) Root device type: ebs, (2) Virtualization type: hvm, and  (3) ENA Enabled: Yes
-  default = ["ami-07ebfd5b3428b6f4d", "ami-01fbc92d24852df9b"]
+  default = ["ami-0885b1f6bd170450c", "ami-01fbc92d24852df9b"]
 }
 
 variable "ec2_web_server_types" {
@@ -59,9 +61,9 @@ variable "ec_web_server_tags_values" {
 
 # A2. database servers
 variable "ec2_db_server_ami_numbers" {
-  # note: Ubuntu Server 18.04 LTS (HVM), SSD Volume Type => ami-07ebfd5b3428b6f4d (64-bit x86)
+  # note: Ubuntu Server 20.04 LTS (HVM), SSD Volume Type => ami-0885b1f6bd170450c (64-bit x86)
   # note: (1) Root device type: ebs, (2) Virtualization type: hvm, and  (3) ENA Enabled: Yes
-  default = ["ami-07ebfd5b3428b6f4d", "ami-07ebfd5b3428b6f4d"]
+  default = ["ami-0885b1f6bd170450c", "ami-0885b1f6bd170450c"]
 }
 
 variable "ec2_db_server_types" {
@@ -90,7 +92,7 @@ variable "ec_db_server_tags_values" {
 }
 
 
-#B: define non-provider variable(s) for lightsail instances
+# B: define non-provider variable(s) for lightsail instances
 
 # B1. web servers
 variable "lightsail_web_server_names" {
@@ -158,5 +160,6 @@ variable "lightsail_db_server_tags_values" {
 variable "lightsail_db_server_static_ip" {
   default = ["static-ip-mysql-server", "static-ip-mongodb-server"]
 }
+
 
 # add more variables as necessary or desired.
