@@ -29,7 +29,7 @@ enable_web_server=true        # i.e. install web server - including setting of p
 # create relevant directories
 cd /home/
 sudo mkdir base
-cd ecotert1
+cd base
 sudo mkdir Server
 sudo mkdir Client
     
