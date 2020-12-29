@@ -41,17 +41,30 @@ output "ec2_db_server_instances" {
   value = module.public_cloud_resources.aws_ec2_db_servers
 }
 
-output "lightsail_instances" {
+output "lightsail_web_server_instances" {
+  description = "A list of all created AWS lightsail web server instances"
+  # the list contains key-value pairs of each instance's attributes
+  value = module.public_cloud_resources.aws_lightsail_web_servers
+}
+
+output "lightsail_db_server_instances" {
   description = "A list of all created AWS lightsail db server instances"
   # the list contains key-value pairs of each instance's attributes
   value = module.public_cloud_resources.aws_lightsail_db_servers
 }
 
-output "lightsail_instances_ips" {
+output "lightsail_web_server_static_ips" {
   description = "A list of all created AWS lightsail static ips"
   # the list contains key-value pairs of each instance's attributes
-  value = module.public_cloud_resources.aws_lightsail_static_ips
+  value = module.public_cloud_resources.aws_lightsail_web_server_static_ips
 }
+
+output "lightsail_db_server_static_ips" {
+  description = "A list of all created AWS lightsail static ips"
+  # the list contains key-value pairs of each instance's attributes
+  value = module.public_cloud_resources.aws_lightsail_db_server_static_ips
+}
+
 
 # add more outputs as necessary or desired.
 ```
