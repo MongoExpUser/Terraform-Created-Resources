@@ -10,8 +10,13 @@
 #  @License Ends                                                                                    #
 #                                                                                                   #
 #...................................................................................................#
-#  init.sh                                                                                          #
-#  start-up script - installs Node.js v15.x, Express Server v5.0.0-alpha.7 & other Node.js packages #
+#  init.sh (start-up script) - performes the following actions:                                     #
+#  1) Create relevant directories                                                                   #
+#  2) Installs missing Ubuntu packages                                                              #
+#  3) Set firewall rules                                                                            #
+#  4) Installs Node.js v15.x                                                                        #
+#  5) Installs Express Server v5.0.0-alpha.7 and                                                    # 
+#  6) Installs other relevant Node.js packages                                                      #
 #...................................................................................................#
 
 
@@ -57,7 +62,6 @@ echo -e "y"
 sudo ufw allow 22
 sudo ufw allow 80
 sudo ufw allow 443
-
 
 # install node.js
 curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
