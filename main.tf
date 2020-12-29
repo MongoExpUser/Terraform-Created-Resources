@@ -46,7 +46,7 @@ resource "aws_instance" "aws_ec2_db_server" {
 }
 
 # create lightsail instance(s)
-resource "aws_lightsail_instance" "aws_lightsail_db_server" {
+resource "aws_lightsail_instance" "aws_lightsail_server" {
   count                 = length(var.lightsail_names)
   name                  = var.lightsail_names[count.index]
   availability_zone     = var.lightsail_availability_zone
