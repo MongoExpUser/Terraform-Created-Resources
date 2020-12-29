@@ -1,4 +1,3 @@
-
 #...................................................................................................#
 #                                                                                                   #
 #  @License Starts                                                                                  #
@@ -10,7 +9,7 @@
 #  @License Ends                                                                                    #
 #                                                                                                   #
 #...................................................................................................#
-#  init.sh (start-up script) - performes the following actions:                                     #
+#  init_web_server.sh (start-up script) - performes the following actions:                          #
 #  1) Create relevant directories                                                                   #
 #  2) Installs missing Ubuntu packages                                                              #
 #  3) Set firewall rules                                                                            #
@@ -18,7 +17,6 @@
 #  5) Installs Express Server v5.0.0-alpha.7 and                                                    #
 #  6) Installs other relevant Node.js packages                                                      #
 #...................................................................................................#
-
 
 
 #!/bin/bash
