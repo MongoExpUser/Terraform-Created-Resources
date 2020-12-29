@@ -47,6 +47,12 @@ output "lightsail_instances" {
   value = module.public_cloud_resources.aws_lightsail_db_servers
 }
 
+output "lightsail_instances_ips" {
+  description = "A list of all created AWS lightsail static ips"
+  # the list contains key-value pairs of each instance's attributes
+  value = module.public_cloud_resources.aws_lightsail_static_ips
+}
+
 # add more outputs as necessary or desired.
 ```
 
