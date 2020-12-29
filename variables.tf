@@ -37,7 +37,7 @@ variable "ec2_web_server_types" {
   # note: for instances that support cpu_core_count, see url below:
   #    : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values
   default = ["t3a.nano", "t3a.nano"]
-  # default = ["g3s.xlarge", "g3s.xlarge"]
+  #default = ["g3s.xlarge", "g3s.xlarge"]
 }
 
 variable "ec2_web_server_cpu_core_count" {
@@ -46,14 +46,14 @@ variable "ec2_web_server_cpu_core_count" {
 }
 
 variable "ec2_web_server_cpu_threads_per_core" {
- # set to 1 for HPC applications, otherwise set to 2
+  # set to 1 for HPC applications, otherwise set to 2
   default = 2
 }
 
 variable "ec_web_server_tags_values" {
   description = "A list of ec2 (web server) tags' values of type string"
-   # length must equal length of "ec2_web_server_ami_number"
-  default = ["web_server_2_node_js", "web_server_1_node_js"]
+  # length must equal length of "ec2_web_server_ami_number"
+  default = ["nodejs-web-server-2", "nodejs-web-server-1"]
 }
 
 
@@ -86,14 +86,14 @@ variable "ec2_db_server_cpu_threads_per_core" {
 variable "ec_db_server_tags_values" {
   description = "A list of ec2 (db server) tags' values of type string"
   # length must equal length of "ec2_db_server_ami_number"
-  default = ["db1_mysql", "db2_mongodb"]
+  default = ["mysql-data-store", "mongodb-data-store"]
 }
 
 
 #B: define non-provider variable(s) for lightsail instances
 variable "lightsail_names" {
   description = "A list of lightsail names of type string"
-  default = ["lightsail_mysql_server", "lightsail_mongodb_server"]
+  default = ["mysql-server", "mongodb-server"]
 }
 
 variable "lightsail_availability_zone" {
@@ -102,7 +102,7 @@ variable "lightsail_availability_zone" {
 
 variable "lightsail_blueprint_ids" {
   # length must equal length of "lightsail_names"
-  default = ["ubuntu_18_04", "ubuntu_18_04"]
+  default = ["ubuntu_20_04", "ubuntu_20_04"]
 }
 
 variable "lightsail_bundle_ids" {
@@ -113,7 +113,13 @@ variable "lightsail_bundle_ids" {
 variable "lightsail_tags_values" {
   description = "A list of lightsail tags' values of type string"
   # length must equal length of "lightsail_names"
-  default = ["db1_mysql", "db2_mongodb"]
+  default = ["mysql-data-store", "mongodb-data-store"]
+}
+
+
+variable "user_data_file_path" {
+  description = "Path to bash shell script (start-up script)"
+  default = "./init.sh"
 }
 
 # add more variables as necessary or desired.
