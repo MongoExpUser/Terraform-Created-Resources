@@ -1,17 +1,18 @@
 
-#..................................................................................................#
-#                                                                                                  #
-#  @License Starts                                                                                 #
-#                                                                                                  #
-#  Copyright © 2015 - present. MongoExpUser                                                        #
-#                                                                                                  #
-#  License: MIT - https://github.com/MongoExpUser/Terraform-Created-Resources/blob/master/LICENSE  #
-#                                                                                                  #
-#  @License Ends                                                                                   #
-#                                                                                                  #
-#..................................................................................................#
-#  init.sh: start-up script: installs Node.js v15.x/Express Server v5.0.0-alpha.7                  #
-#..................................................................................................#
+#...................................................................................................#
+#                                                                                                   #
+#  @License Starts                                                                                  #
+#                                                                                                   #
+#  Copyright © 2015 - present. MongoExpUser                                                         #
+#                                                                                                   #
+#  License: MIT - https://github.com/MongoExpUser/Terraform-Created-Resources/blob/master/LICENSE   #
+#                                                                                                   #
+#  @License Ends                                                                                    #
+#                                                                                                   #
+#...................................................................................................#
+#  init.sh                                                                                          #
+#  start-up script - installs Node.js v15.x, Express Server v5.0.0-alpha.7 & other Node.js packages #
+#...................................................................................................#
 
 
 #!/bin/bash
