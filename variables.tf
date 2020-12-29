@@ -116,11 +116,13 @@ variable "lightsail_tags_values" {
   default = ["mysql-data-store", "mongodb-data-store", "nodejs-express"]
 }
 
+variable "aws_lightsail_static_ip" {
+  default = ["static_ip_1", "static_ip_2", "static_ip_3"]
+}
 
 variable "user_data_file_path" {
   description = "Path to bash shell script (start-up script)"
   default = "./init.sh"
 }
-
 
 # add more variables as necessary or desired.
