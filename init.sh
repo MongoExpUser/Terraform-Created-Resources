@@ -17,8 +17,6 @@
 #  4) Installs Node.js v15.x                                                                        #
 #  5) Installs Express Server v5.0.0-alpha.7 and                                                    #
 #  6) Installs other relevant Node.js packages                                                      #
-#  7) Install  mysql server, if desired.                                                            #
-#  8) Install  mongodb server, if desired.                                                          #
 #...................................................................................................#
 
 
