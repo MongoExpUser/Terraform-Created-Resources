@@ -91,38 +91,72 @@ variable "ec_db_server_tags_values" {
 
 
 #B: define non-provider variable(s) for lightsail instances
-variable "lightsail_names" {
+
+# B1. web servers
+variable "lightsail_web_server_names" {
   description = "A list of lightsail names of type string"
-  default = ["mysql-server", "mongodb-server", "nodejs-expressjs-server"]
+  default = ["nodejs-web-server-2", "nodejs-web-server-1"]
 }
 
-variable "lightsail_availability_zone" {
+variable "lightsail_web_server_availability_zone" {
   default = "us-east-1a"
 }
 
-variable "lightsail_blueprint_ids" {
+variable "lightsail_web_server_blueprint_ids" {
   # length must equal length of "lightsail_names"
-  default = ["ubuntu_20_04", "ubuntu_20_04", "ubuntu_20_04"]
+  default = ["ubuntu_20_04", "ubuntu_20_04"]
 }
 
-variable "lightsail_bundle_ids" {
+variable "lightsail_web_server_bundle_ids" {
   # length must equal length of "lightsail_names"
-  default = ["nano_2_0", "nano_2_0", "nano_2_0"]
+  default = ["nano_2_0", "nano_2_0"]
 }
 
-variable "lightsail_tags_values" {
+variable "lightsail_web_server_tags_values" {
   description = "A list of lightsail tags' values of type string"
   # length must equal length of "lightsail_names"
-  default = ["mysql-data-store", "mongodb-data-store", "nodejs-expressjs"]
+  default = ["nodejs-web-server-2", "nodejs-web-server-1"]
 }
 
-variable "aws_lightsail_static_ip" {
-  default = ["static_ip_1", "static_ip_2", "static_ip_3"]
+variable "lightsail_web_server_static_ip" {
+  default = ["static-ip-web-server-2", "static-ip-web-server-1"]
 }
 
-variable "user_data_file_path" {
-  description = "Path to bash shell script (start-up script)"
-  default = "./init.sh"
+variable "web_server_user_data_file_path" {
+  description = "Path to web server bash shell script (start-up script)"
+  default = "./init_web_server.sh"
 }
+
+
+# B2. database servers
+variable "lightsail_db_server_names" {
+  description = "A list of lightsail names of type string"
+  default = ["mysql-server", "mongodb-server"]
+}
+
+variable "lightsail_db_server_availability_zone" {
+  default = "us-east-1a"
+}
+
+variable "lightsail_db_server_blueprint_ids" {
+  # length must equal length of "lightsail_names"
+  default = ["ubuntu_20_04", "ubuntu_20_04"]
+}
+
+variable "lightsail_db_server_bundle_ids" {
+  # length must equal length of "lightsail_names"
+  default = ["nano_2_0", "nano_2_0"]
+}
+
+variable "lightsail_db_server_tags_values" {
+  description = "A list of lightsail tags' values of type string"
+  # length must equal length of "lightsail_names"
+  default = ["mysql-data-store", "mongodb-data-store"]
+}
+
+variable "lightsail_db_server_static_ip" {
+  default = ["static-ip-mysql-server", "static-ip_mongodb-server"]
+}
+
 
 # add more variables as necessary or desired.
