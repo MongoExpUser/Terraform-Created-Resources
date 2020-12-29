@@ -13,6 +13,7 @@
 #..................................................................................................#
 
 
+
 #define output(s)
 output "aws_ec2_web_servers" {
   description = "A list of all created EC2 web server instances"
@@ -26,16 +27,29 @@ output "aws_ec2_db_servers" {
   value = aws_instance.aws_ec2_db_server
 }
 
-output "aws_lightsail_servers" {
+output "aws_lightsail_web_servers" {
   description = "A list of all created AWS lightsail server instances"
   # the list contains key-value pairs of each instance's attributes
-  value = aws_lightsail_instance.aws_lightsail_server
+  value = aws_lightsail_instance.aws_lightsail_web_server
 }
 
-output "aws_lightsail_static_ips" {
-  description = "A list of all created AWS lightsail static ips"
+output "aws_lightsail_db_servers" {
+  description = "A list of all created AWS lightsail server instances"
   # the list contains key-value pairs of each instance's attributes
-  value = aws_lightsail_static_ip.aws_lightsail_static_ips
+  value = aws_lightsail_instance.aws_lightsail_db_server
 }
+
+output "aws_lightsail_web_server_static_ips" {
+  description = "A list of all created AWS lightsail web server  static ips"
+  # the list contains key-value pairs of each instance's attributes
+  value = aws_lightsail_static_ip.aws_lightsail_web_server_static_ips
+}
+
+output "aws_lightsail_db_server_static_ips" {
+  description = "A list of all created AWS lightsail db server static ips"
+  # the list contains key-value pairs of each instance's attributes
+  value = aws_lightsail_static_ip.aws_lightsail_db_server_static_ips
+}
+
 
 # add more outputs as necessary or desired.
