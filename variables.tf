@@ -93,7 +93,7 @@ variable "ec_db_server_tags_values" {
 #B: define non-provider variable(s) for lightsail instances
 variable "lightsail_names" {
   description = "A list of lightsail names of type string"
-  default = ["mysql-server", "mongodb-server"]
+  default = ["mysql-server", "mongodb-server", "nodejs-express-server"]
 }
 
 variable "lightsail_availability_zone" {
@@ -102,18 +102,18 @@ variable "lightsail_availability_zone" {
 
 variable "lightsail_blueprint_ids" {
   # length must equal length of "lightsail_names"
-  default = ["ubuntu_20_04", "ubuntu_20_04"]
+  default = ["ubuntu_20_04", "ubuntu_20_04", "ubuntu_20_04"]
 }
 
 variable "lightsail_bundle_ids" {
   # length must equal length of "lightsail_names"
-  default = ["nano_2_0", "nano_2_0"]
+  default = ["nano_2_0", "nano_2_0", "nano_2_0"]
 }
 
 variable "lightsail_tags_values" {
   description = "A list of lightsail tags' values of type string"
   # length must equal length of "lightsail_names"
-  default = ["mysql-data-store", "mongodb-data-store"]
+  default = ["mysql-data-store", "mongodb-data-store", "nodejs-express"]
 }
 
 
@@ -121,5 +121,6 @@ variable "user_data_file_path" {
   description = "Path to bash shell script (start-up script)"
   default = "./init.sh"
 }
+
 
 # add more variables as necessary or desired.
