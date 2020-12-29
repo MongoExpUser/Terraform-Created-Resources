@@ -55,8 +55,24 @@ resource "aws_lightsail_instance" "aws_lightsail_server" {
   # user data file: bash shell script (start-up script)
   user_data             = file(var.user_data_file_path)
   tags = {
-    lightsail_key = var.lightsail_tags_values[count.index]
+    key = var.lightsail_tags_values[count.index]
   }
+}
+
+# create lightsail instance(s) static ip(s)
+resource "aws_lightsail_static_ip" "aws_lightsail_static_ips" {
+  count      = length(var.aws_lightsail_static_ip)
+  name       = var.aws_lightsail_static_ip[count.index]
+  depends_on = [aws_lightsail_instance.aws_lightsail_server]
+}
+
+
+# attach lightsail instance(s) to static ip(s)
+resource "aws_lightsail_static_ip_attachment" "aws_lightsail_static_ip_attachments" {
+  count          = length(var.lightsail_names)
+  static_ip_name = aws_lightsail_static_ip.aws_lightsail_static_ips[count.index].id
+  instance_name  = aws_lightsail_instance.aws_lightsail_server[count.index].id
+  depends_on     = [aws_lightsail_static_ip.aws_lightsail_static_ips]
 }
 
 # add more resourcess as necessary or desired.
