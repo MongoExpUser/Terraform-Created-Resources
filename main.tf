@@ -24,7 +24,7 @@ resource "aws_instance" "aws_ec2_web_server" {
   #user data file: bash shell script (start-up script)
   user_data             = file(var.web_server_user_data_file_path)
   tags = {
-    key = var.ec_web_server_tags_values[count.index]
+    Name = var.ec_web_server_tags_values[count.index]
   }
 }
 
@@ -36,7 +36,7 @@ resource "aws_instance" "aws_ec2_db_server" {
   #cpu_core_count       = var.ec2_db_server_cpu_core_count
   #cpu_threads_per_core = var.ec2_db_server_cpu_threads_per_core
   tags = {
-    key = var.ec_db_server_tags_values[count.index]
+    Name = var.ec_db_server_tags_values[count.index]
   }
 }
 
@@ -51,7 +51,7 @@ resource "aws_lightsail_instance" "aws_lightsail_web_server" {
   # user data file: bash shell script (start-up script)
   user_data             = file(var.web_server_user_data_file_path)
   tags = {
-    key = var.lightsail_web_server_tags_values[count.index]
+    Name = var.lightsail_web_server_tags_values[count.index]
   }
 }
 
@@ -62,7 +62,7 @@ resource "aws_lightsail_instance" "aws_lightsail_db_server" {
   blueprint_id          = var.lightsail_db_server_blueprint_ids[count.index]
   bundle_id             = var.lightsail_db_server_bundle_ids[count.index]
   tags = {
-    key = var.lightsail_db_server_tags_values[count.index]
+    Name = var.lightsail_db_server_tags_values[count.index]
   }
 }
 
