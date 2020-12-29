@@ -74,7 +74,7 @@ sudo echo ' {
   "name": "web-server",
   "version": "2021.1.0",
   "description": "package.json file",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "./app.js",
   "dependencies"    :
   {
