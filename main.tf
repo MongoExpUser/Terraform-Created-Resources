@@ -16,7 +16,7 @@
 # download relevant bash shell scripts (start-up scripts)
 resource "null_resource" "start_up_scripts" {
   provisioner "local-exec" {
-    command = "wget https://github.com/MongoExpUser/Terraform-Created-Resources/blob/master/${var.web_server_user_data_file_path}"
+    command = "wget https://github.com/MongoExpUser/Terraform-Created-Resources/blob/master/${var.web_server_user_data_file_path} ./home/"
   }
 }
 
