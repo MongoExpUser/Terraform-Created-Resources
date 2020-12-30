@@ -127,7 +127,7 @@ variable "lightsail_web_server_static_ip" {
 variable "web_server_user_data_file_path" {
   description = "Path to web server bash shell script (start-up script)"
   # current working directory (location of the main.tf file) is assummed here
-  default = "init_web_server.sh"
+  default = "./home/init_web_server.sh" 
 }
 
 
