@@ -158,11 +158,10 @@ variable "lightsail_db_server_static_ip" {
 
 # C: define non-provider variable(s) common to both ec2 and lightsail instances
 variable "web_server_user_data_file_path" {
-  description = "Path to web server bash shell script (start-up script)"
-  # note 1: an initially empty "init_web_server.sh file must exist in the current working directory (CWD)
-  # note 2: location of the main.tf file is assummed to be the CWD here
-  # note 3: once this module is initially run or invoked, the latest version of "init_web_server.sh is copied 
-  #         from the git repo to overide the empty "init_web_server.sh file
+  description = "Path to web server bash file (start-up script)"
+  # note 1: before running the terraform module, the bash file (start-up script) in this path must be downloaded into the CWD
+  # note 2: the CWD is assumed to be the location of the base.tf or main.tf file
+  # note 3: the bash file (init_web_server.sh) can be downloaded from:  https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_web_server.sh
   default = "init_web_server.sh"
 }
 
