@@ -12,7 +12,7 @@ This repo is based on <strong>```Terraform Version 0.12.24```</strong>.
 To run the module:
 
 1) Save or download the start-up bash file(s) in the link(s) below to the current working directory (CWD): <br>
-   <font size = "1"> a) https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_web_server.sh </font><br>
+   a) https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_web_server.sh <br>
    b) https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_mongodb_server.sh <br>
    c) https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_mysql_server.sh
 
