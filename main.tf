@@ -13,14 +13,6 @@
 #..................................................................................................#
 
 
-# download relevant bash shell scripts (start-up scripts)
-resource "null_resource" "start_up_scripts" {
-  provisioner "local-exec" {
-    command = "sudo curl https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/${var.web_server_user_data_file_path}  --output ${var.web_server_user_data_file_path}"
-  }
-}
-
-
 # create aws ec2 instance(s), using "aws_instance" statement with ami-number
 resource "aws_instance" "aws_ec2_web_server" {
   count                 = length(var.ec2_web_server_ami_numbers)
@@ -34,7 +26,6 @@ resource "aws_instance" "aws_ec2_web_server" {
   tags = {
     Name = var.ec_web_server_tags_values[count.index]
   }
-  depends_on     = [null_resource.start_up_scripts]
 }
 
 resource "aws_instance" "aws_ec2_db_server" {
@@ -62,7 +53,6 @@ resource "aws_lightsail_instance" "aws_lightsail_web_server" {
   tags = {
     Name = var.lightsail_web_server_tags_values[count.index]
   }
-  depends_on     = [null_resource.start_up_scripts]
 }
 
 resource "aws_lightsail_instance" "aws_lightsail_db_server" {
