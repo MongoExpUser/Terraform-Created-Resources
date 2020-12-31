@@ -83,14 +83,7 @@ output "lightsail_db_server_static_ips" {
        TF_VAR_aws_region="aws-region-value" \
        terraform plan
                                                                                     
-  #3) run terraform apply - twice
-  a) download relevant init file(s) from repo
-  sudo TF_VAR_aws_access_key="access-key-value" \
-      TF_VAR_aws_secret_key="secret-key-value" \
-      TF_VAR_aws_region="aws-region-value" \
-      terraform apply
-      
-  b) create the resoource(s)
+  #3) run terraform apply 
   sudo TF_VAR_aws_access_key="access-key-value" \
       TF_VAR_aws_secret_key="secret-key-value" \
       TF_VAR_aws_region="aws-region-value" \
