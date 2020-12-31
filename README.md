@@ -68,12 +68,10 @@ output "lightsail_db_server_static_ips" {
   value = module.public_cloud_resources.aws_lightsail_db_server_static_ips
 }
 
-
-# add more outputs as necessary or desired.
 ```
 
 
-2) Finally, execute the module from the base file (base.tf) in the current working directory (CWD) by typing the following commands at the prompt (assuming running via <strong>```bash```</strong>  with <strong>```sudo```</strong> access):
+3) Finally, execute the module from the base file (base.tf) in the current working directory (CWD) by typing the following commands at the prompt (assuming running via <strong>```bash```</strong>  with <strong>```sudo```</strong> access):
 
 
 ```bash
