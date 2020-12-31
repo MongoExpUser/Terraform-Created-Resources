@@ -11,7 +11,7 @@ This repo is based on <strong>```Terraform Version 0.12.24```</strong>.
 
 To run the module:
 
-1) Save or download the start-up bash file(s) in the link(s) below to the current working directory (CWD):
+1) Save or download the start-up bash file(s) in the link(s) below to the current working directory (CWD): <br>
    a) https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_web_server.sh
 
 2) Also, copy the following script into a file (base.tf) in the current working directory:
