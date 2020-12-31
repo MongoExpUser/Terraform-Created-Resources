@@ -124,12 +124,6 @@ variable "lightsail_web_server_static_ip" {
   default = ["static-ip-web-server-2", "static-ip-web-server-1"]
 }
 
-variable "web_server_user_data_file_path" {
-  description = "Path to web server bash shell script (start-up script)"
-  # current working directory (location of the main.tf file) is assummed here
-  default = "/home/init_web_server.sh" 
-}
-
 
 # B2. database servers
 variable "lightsail_db_server_names" {
@@ -159,6 +153,17 @@ variable "lightsail_db_server_tags_values" {
 
 variable "lightsail_db_server_static_ip" {
   default = ["static-ip-mysql-server", "static-ip-mongodb-server"]
+}
+
+
+# C: define non-provider variable(s) common to both ec2 and lightsail instances
+variable "web_server_user_data_file_path" {
+  description = "Path to web server bash shell script (start-up script)"
+  # note 1: an initially empty "init_web_server.sh file must exist in the current working directory (CWD)
+  # note 2: location of the main.tf file is assummed to be the CWD here
+  # note 3: once this module is initially run or invoked, the latest version of "init_web_server.sh is copied 
+  #         from the git repo to overide the empty "init_web_server.sh file
+  default = "init_web_server.sh"
 }
 
 
