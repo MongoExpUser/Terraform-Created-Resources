@@ -11,7 +11,10 @@ This repo is based on <strong>```Terraform Version 0.12.24```</strong>.
 
 To run the module:
 
-1) Copy the following script into a file (base.tf) in the current working directory:
+1) Save or download the start-up bash file(s) in the link(s) below to the current working directory (CWD):
+   a) https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_web_server.sh
+
+2) Also, copy the following script into a file (base.tf) in the current working directory:
 
 ```hcl
 # define provider(s) credential variables
@@ -70,7 +73,7 @@ output "lightsail_db_server_static_ips" {
 ```
 
 
-2) Execute the module from the base file (base.tf) in the current working directory (CWD) by typing the following commands at the prompt (assuming running via <strong>```bash```</strong>  with <strong>```sudo```</strong> access):
+2) Finally, execute the module from the base file (base.tf) in the current working directory (CWD) by typing the following commands at the prompt (assuming running via <strong>```bash```</strong>  with <strong>```sudo```</strong> access):
 
 
 ```bash
@@ -95,5 +98,3 @@ output "lightsail_db_server_static_ips" {
 Copyright © 2015 - present. MongoExpUser
 
 Licensed under the MIT license.
-
-
