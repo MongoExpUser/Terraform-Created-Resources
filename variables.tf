@@ -88,7 +88,7 @@ variable "ec2_db_server_cpu_threads_per_core" {
 variable "ec_db_server_tags_values" {
   description = "A list of ec2 (db server) tags' values of type string"
   # length must equal length of "ec2_db_server_ami_number"
-  default = ["mysql-data-store", "mongodb-data-store"]
+  default = ["mysql-server-2", "mysql-server-1"]
 }
 
 
@@ -128,7 +128,7 @@ variable "lightsail_web_server_static_ip" {
 # B2. database servers
 variable "lightsail_db_server_names" {
   description = "A list of lightsail names of type string"
-  default = ["mysql-server", "mongodb-server"]
+  default = ["mongodb-server-2", "mongodb-server-1"]
 }
 
 variable "lightsail_db_server_availability_zone" {
@@ -148,7 +148,7 @@ variable "lightsail_db_server_bundle_ids" {
 variable "lightsail_db_server_tags_values" {
   description = "A list of lightsail tags' values of type string"
   # length must equal length of "lightsail_db_server_names"
-  default = ["mysql-data-store", "mongodb-data-store"]
+  default = ["mongodb-server-2", "mongodb-server-1"]
 }
 
 variable "lightsail_db_server_static_ip" {
@@ -163,6 +163,22 @@ variable "web_server_user_data_file_path" {
   # note 2: the CWD is assumed to be the location of the base.tf or main.tf file
   # note 3: the bash file (init_web_server.sh) can be downloaded from:  https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_web_server.sh
   default = "init_web_server.sh"
+}
+
+variable "mongodb_server_user_data_file_path" {
+  description = "Path to mongodb server bash file (start-up script)"
+  # note 1: before running the terraform module, the bash file (start-up script) in this path must be downloaded into the CWD
+  # note 2: the CWD is assumed to be the location of the base.tf or main.tf file
+  # note 3: the bash file (init_mongodb_server.sh) can be downloaded from:  https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_mongodb_server.sh
+  default = "init_mongodb_server.sh"
+}
+
+variable "mysql_server_user_data_file_path" {
+  description = "Path to mysql server bash file (start-up script)"
+  # note 1: before running the terraform module, the bash file (start-up script) in this path must be downloaded into the CWD
+  # note 2: the CWD is assumed to be the location of the base.tf or main.tf file
+  # note 3: the bash file (init_mysql_server.sh) can be downloaded from:  https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_mysql_server.sh
+  default = "init_mysql_server.sh"
 }
 
 
