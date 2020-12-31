@@ -16,9 +16,10 @@
 # download relevant bash shell scripts (start-up scripts)
 resource "null_resource" "start_up_scripts" {
   provisioner "local-exec" {
-    command = "sudo wget https://github.com/MongoExpUser/Terraform-Created-Resources/blob/master/${var.web_server_user_data_file_path} -P /home/"
+    command = "sudo curl https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/${var.web_server_user_data_file_path}  --output ${var.web_server_user_data_file_path}"
   }
 }
+
 
 # create aws ec2 instance(s), using "aws_instance" statement with ami-number
 resource "aws_instance" "aws_ec2_web_server" {
