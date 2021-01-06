@@ -5,8 +5,8 @@
 <br>
 
 The following public cloud platforms and resources are currently covered:
-1) <strong>```AWS```</strong> - EC2 and Lightsails instances (VMs) with MongoDB and MySQL installations
-2) <strong>```Linode```</strong> - Linode instances (VMs) with MongoDB installation.
+1) <strong>```AWS```</strong> - EC2 and Lightsails instances (VMs) with Node.js, MongoDB and MySQL installations
+2) <strong>```Linode```</strong> - Linode instances (VMs) with Node.js and MongoDB installations.
 
 
 This repo is based on <strong>```Terraform Version 0.12.24```</strong>.
