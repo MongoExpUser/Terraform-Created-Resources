@@ -2,14 +2,18 @@
 # Terraform-Created-Resources
 
 <strong>Terraform module for creation of resources on public cloud platforms.</strong>
+<br>
+
+The following public cloud platforms and resources are currently covered:
+1) <strong>```AWS```</strong> - EC2 and Lightsails instances (VMs) with MongoDB and MySQL installations
+2) <strong>```Linode```</strong> - Linode instances (VMs) with MongoDB installation.
+
 
 This repo is based on <strong>```Terraform Version 0.12.24```</strong>.
 
-#
-<strong>Running Module</strong>
-#
+## RUNNING MODULE
 
-To run the module:
+A) <strong>To run the module to create resources on ```AWS```</strong>:
 
 1) Save or download the start-up bash file(s) in the link(s) below to the current working directory (CWD): <br>
    a) https://raw.githubusercontent.com/MongoExpUser/Terraform-Created-Resources/master/init_web_server.sh <br>
