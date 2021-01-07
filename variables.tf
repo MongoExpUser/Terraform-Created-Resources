@@ -25,7 +25,6 @@ variable "create_aws_resources" {
 }
 
 
-
 # B. define non-provider variable(s) for aws resource(s)
 
 # B1. web servers - ec2
