@@ -304,7 +304,7 @@ EOF
 resource "linode_instance" "linode_instance_web_server_init" {
   # note: var.create_linode_resources can be 1 (true) or 0 (false)
   count             = length(var.linode_web_server_labels) * var.create_linode_resources
-  region            = var.region
+  region            = var.linode_region
   label             = var.linode_web_server_labels[count.index]
   type              = var.linode_web_server_types[count.index]
   image             = var.linode_web_server_images[count.index]
