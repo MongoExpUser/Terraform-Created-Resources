@@ -119,11 +119,13 @@ output "lightsail_db_server_static_ips" {
 ```hcl
 # define credential variable(s) of provider(s)
 variable "linode_token_value" {}
+variable "linode_region_value" {}
 variable "create_linode_resources" {default = 1}
 
 # define provider(s)
 provider "linode" {
   token = var.linode_token_value
+  region = var.linode_region_value
 }
 
 # create resource(s)
@@ -161,10 +163,10 @@ output "linode_instance_web_servers" {
   sudo terraform init
   
   #2) run terraform plan
-  sudo TF_VAR_linode_token_value="linode-token-value" terraform plan
+  sudo TF_VAR_linode_token_value="linode-token-value" TF_VAR_linode_region_value="linode-region-value" terraform plan
                                                                                     
   #3) run terraform apply
-  sudo TF_VAR_linode_token_value="linode-token-value" terraform apply
+  sudo TF_VAR_linode_token_value="linode-token-value" TF_VAR_linode_region_value="linode-region-value" terraform apply
 ```
 
 
