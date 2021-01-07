@@ -20,10 +20,6 @@ variable "provider_name" {
  default = "AWS"
 }
 
-variable "region" {
- default = "us-east-1"
-}
-
 
 # B. define non-provider variable(s) for aws resource(s)
 
