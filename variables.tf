@@ -253,5 +253,4 @@ variable "linode_web_server_package" {
 }
 
 
-
 # add more variables as necessary or desired.
