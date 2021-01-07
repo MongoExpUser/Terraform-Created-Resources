@@ -131,23 +131,23 @@ module "public_cloud_resources" {
   source = "git::https://github.com/MongoExpUser/Terraform-Created-Resources.git"
 }
 
-# create output(s)
-output "linode_sshkey_output_keys" {
+# create outputs
+output "linode_sshkeys" {
   description = "A list of all created linode_sshkeys"
   # the list contains key-value pairs of each linode_sshkey's attributes
-  value = module.public_cloud_resources.linode_sshkey_output
+  value = module.public_cloud_resources.linode_sshkeys
 }
 
-output "linode_stackscript_output_scripts" {
+output "linode_stackscripts" {
   description = "A list of all created linode_stackscripts"
   # the list contains key-value pairs of each linode_stackscript's attributes
-  value =  module.public_cloud_resources.linode_stackscript_output
+  value =  module.public_cloud_resources.linode_stackscripts
 }
 
-output "linode_instance_web_server_output_instances" {
+output "linode_instance_web_servers" {
   description = "A list of all created linode_instances"
   # the list contains key-value pairs of each linode_instance's attributes
-  value = module.public_cloud_resources.linode_instance_web_server_output
+  value = module.public_cloud_resources.linode_instance_web_servers
 }
 
 ```
