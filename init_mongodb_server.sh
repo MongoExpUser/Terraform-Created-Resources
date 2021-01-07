@@ -12,6 +12,8 @@
 #  init_mongodb_server.sh (start-up script) - performes the following actions:                      #
 #  1) Installs missing Ubuntu packages                                                              #
 #  2) Installs mongodb server                                                                       #
+#  4) Installs Node.js v15.x, if enabled (with Express v5.0.0-alpha.8 & other node.js packages,     #
+#     and also set firewall rules for web server                                                    #
 #  3) Set firewall rules for mongodb server                                                         #
 #  4) Start mongodb without credentials (OPTIONAL)  - just for checking valid installation          #
 #     - NOT recommended for production deployment                                                   #
