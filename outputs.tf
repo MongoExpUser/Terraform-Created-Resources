@@ -52,19 +52,19 @@ output "aws_lightsail_db_server_static_ips" {
 
 
 # define outputs for linode resource(s)
-output "linode_sshkey_outputs" {
+output "linode_sshkeys" {
   description = "A list of all created linode_sshkeys"
   # the list contains key-value pairs of each linode_sshkey's attributes
   value = linode_sshkey.linode_sshkey_init
 }
 
-output "linode_stackscript_outputs" {
+output "linode_stackscripts" {
   description = "A list of all created linode_stackscripts"
   # the list contains key-value pairs of each linode_stackscript's attributes
   value = linode_stackscript.linode_stackscript_init
 }
 
-output "linode_instance_web_server_outputs" {
+output "linode_instance_web_servers" {
   description = "A list of all created linode_instances"
   # the list contains key-value pairs of each linode_instance's attributes
   value = linode_instance.linode_instance_web_server_init
