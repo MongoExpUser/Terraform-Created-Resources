@@ -177,7 +177,7 @@ variable "mongodb_server_user_data_file_path" {
 # LINODE
 
 # A. define provider variable(s) for linode
-variable "region" {
+variable "linode_region" {
  default = "us-west"
 }
 
