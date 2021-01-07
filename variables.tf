@@ -20,6 +20,11 @@ variable "provider_name" {
  default = "AWS"
 }
 
+variable "create_aws_resources" {
+ default = 0
+}
+
+
 
 # B. define non-provider variable(s) for aws resource(s)
 
@@ -175,6 +180,10 @@ variable "mongodb_server_user_data_file_path" {
 # A. define provider variable(s) for linode
 variable "linode_region" {
  default = "us-west"
+}
+
+variable "create_linode_resources" {
+ default = 0
 }
 
 # B. define non-provider variable(s) for linode resource(s)
