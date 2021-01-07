@@ -44,12 +44,12 @@ provider "aws" {
   region     = var.aws_region
 }
 
-# create resources
+# create resource(s)
 module "public_cloud_resources" {
   source = "git::https://github.com/MongoExpUser/Terraform-Created-Resources.git"
 }
 
-# create outputs
+# create output(s)
 output "ec2_web_server_instances" {
   description = "A list of all created EC2 web server instances"
   # the list contains key-value pairs of each instance's attributes
@@ -126,12 +126,12 @@ provider "linode" {
   token = var.linode_token_value
 }
 
-# create resources
+# create resource(s)
 module "public_cloud_resources" {
   source = "git::https://github.com/MongoExpUser/Terraform-Created-Resources.git"
 }
 
-# create outputs
+# create output(s)
 output "linode_sshkey_output_keys" {
   description = "A list of all created linode_sshkeys"
   # the list contains key-value pairs of each linode_sshkey's attributes
