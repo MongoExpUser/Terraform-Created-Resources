@@ -18,7 +18,7 @@ The following public cloud platforms and resources are currently covered:
             b) See line <strong>122</strong> of the <strong>```main.tf```</strong> file, where <strong>```linode_stackscript_init```</strong> is defined.<br>
 
 
-This repo is based on <strong>```Terraform Version 0.12.24```</strong>.
+This repo is based on <strong>```Terraform Version 0.14.4```</strong>.
 
 ## RUNNING MODULE
 
