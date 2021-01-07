@@ -136,21 +136,18 @@ output "linode_sshkey_output_keys" {
   description = "A list of all created linode_sshkeys"
   # the list contains key-value pairs of each linode_sshkey's attributes
   value = module.public_cloud_resources.linode_sshkey_output
-  #linode_sshkey.linode_sshkey_init
 }
 
 output "linode_stackscript_output_scripts" {
   description = "A list of all created linode_stackscripts"
   # the list contains key-value pairs of each linode_stackscript's attributes
   value =  module.public_cloud_resources.linode_stackscript_output
-  #linode_stackscript.linode_stackscript_init
 }
 
 output "linode_instance_web_server_output_instances" {
   description = "A list of all created linode_instances"
   # the list contains key-value pairs of each linode_instance's attributes
   value = module.public_cloud_resources.linode_instance_web_server_output
-  #linode_instance.linode_instance_web_server_init
 }
 
 ```
